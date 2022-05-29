@@ -13,16 +13,25 @@ public class section7_Assignment_2 {
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+        driver.get("https://rahulshettyacademy.com/angularpractice/");
 
-        System.out.println(driver.findElement(By.cssSelector("input[id='checkBoxOption1']")).isSelected());
-        driver.findElement(By.cssSelector("input[id='checkBoxOption1']")).click();
-        System.out.println(driver.findElement(By.cssSelector("input[id='checkBoxOption1']")).isSelected());
+        // Send Name, Email and Password
+        driver.findElement(By.cssSelector("input[name='name']")).sendKeys("Haris");
+        driver.findElement(By.cssSelector("input[name='email']")).sendKeys("Haris@gmail.com");
+        driver.findElement(By.cssSelector("input[type='password']")).sendKeys("HarisPassword");
 
-        // Count Number of checkboxes
-        System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());
+        // Check the checkbox
+        driver.findElement(By.cssSelector("input[id='exampleCheck1']")).click();
 
-        driver.quit();
+        driver.findElements(By.cssSelector("select[id='exampleFormControlSelect1'] option")).get(1).click();
+
+        driver.findElement(By.cssSelector("input[id='inlineRadio2']")).click();
+
+        driver.findElement(By.cssSelector("input[type='date']")).sendKeys("12/03/2001");
+        driver.findElement(By.cssSelector("input[type='submit']")).click();
+
+
+//        driver.quit();
 
     }
 }
