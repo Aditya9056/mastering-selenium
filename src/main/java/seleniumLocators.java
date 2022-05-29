@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -63,8 +63,8 @@ public class seleniumLocators {
 
         Thread.sleep(200);
         // Assertion from Testng
-        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/p")).getText(), "You are successfully logged in.");
-        Assert.assertEquals(driver.findElement(By.cssSelector("div[class=\"login-container\"] h2")).getText(), "Hello " + name + ",");
+//        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/p")).getText(), "You are successfully logged in.");
+//        Assert.assertEquals(driver.findElement(By.cssSelector("div[class=\"login-container\"] h2")).getText(), "Hello " + name + ",");
         driver.findElement(By.xpath("//button[text() = \"Log Out\"]")).click();
 
         // whole driver along with browser is closed
