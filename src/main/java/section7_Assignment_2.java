@@ -23,10 +23,13 @@ public class section7_Assignment_2 {
         // Check the checkbox
         driver.findElement(By.cssSelector("input[id='exampleCheck1']")).click();
 
+        // Click the checkbox
         driver.findElements(By.cssSelector("select[id='exampleFormControlSelect1'] option")).get(1).click();
 
+        // Click the radio button
         driver.findElement(By.cssSelector("input[id='inlineRadio2']")).click();
 
+        // Enter the DOB
         driver.findElement(By.cssSelector("input[type='date']")).sendKeys("12/03/2001");
         driver.findElement(By.cssSelector("input[type='submit']")).click();
 
